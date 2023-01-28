@@ -15,9 +15,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 
 const app = express()
 app.use(express.json())
-app.use(cors({
-  origin: ["http://localhost/3000", "https://mern-image-ml.onrender.com"]
-}))
+app.use(cors())
 
 //La siguiente línea fue provisional para mantenerlos en memoría para luego subirlos a cloudinary 
 app.use(fileUpload({ useTempFiles: true, tempFileDir: "./upload"}))
